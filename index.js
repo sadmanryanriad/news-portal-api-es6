@@ -27,13 +27,10 @@ async function handleLoadNews(categoryId){
         const cardDiv = document.createElement('div');
         cardDiv.innerHTML = `
         <div class="card w-[90%] bg-base-100 shadow-xl mx-auto">
-        <figure><img src=" " alt="Shoes" /></figure>
+        <figure><img src="${news?.image_url}" alt="Shoes" /></figure>
         <div class="card-body">
-            <h2 class="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div class="card-actions justify-end">
-                <button class="btn btn-primary">Buy Now</button>
-            </div>
+            <h2 class="card-title">${news.title.slice(0,40)}</h2>
+            <p>${news.details.slice(0,100)}</p>
         </div>
     </div>
         `;
